@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { AddTodoForm } from './components/addTodoForm.jsx';
 
 
 
@@ -45,6 +46,7 @@ export default function App() {
           <h1>Todo App</h1>
           <p>Keep track of your tasks</p>
         </Heading>
+        <AddTodoForm />
       </TodoContent>
     </AppContainer>
   );

@@ -4,14 +4,14 @@ This project is a Todo application built with React and Zustand.
 The purpose of the project is to demonstrate an understanding of **global state management**, clean code structure, accessibility, and responsive design without using prop drilling.
 
 
-## 🎯 Project Goals
+## Project Goals
 
 - Understand and apply global state management
 - Use Zustand instead of React Context or prop drilling
 - Build a clean, accessible, and responsive user interface
 - Structure the project in a clear and maintainable way
 
-## ✅ Project Requirements
+## Project Requirements
 
 The application fulfills the following requirements:
 
@@ -37,7 +37,7 @@ This part describes the file structure of the Todo application and explains the 
 
 
 ## Folder Structure
-
+```
 src/
 ├─ components/
 │  ├─ AddTodoForm.jsx
@@ -51,11 +51,12 @@ src/
 ├─ App.jsx
 ├─ main.jsx
 └─ index.css
+```
+---
 
-# File responsibility
 
 ## Store : store/todoStore.jsx
-### Responsibility:  Global state management using Zustand.
+**Responsibility:  Global state management using Zustand.**
 
 **This file contains:**
 - The global todos array
@@ -66,16 +67,19 @@ src/
 - removeTodo(id) – removes a task
 - toggleTodo(id) – toggles completed/uncompleted state
 
+---
 
 ## Components: components/AddTodoForm.jsx
-### Responsibility: Add new todos.
+**Responsibility: Add new todos.**
 
 - Contains the form and input field
 - Uses local state for input value
 - Calls addTodo from the Zustand store
 
+---
+
 ## Components: components/TodoList.jsx
-### Responsibility: Display the list of todos or an empty state.
+**Responsibility: Display the list of todos or an empty state.**
 
 - Retrieves todos from the store
 
@@ -84,8 +88,10 @@ src/
 - If the list is empty → renders EmptyState
 - If not → renders a list of TodoItem components
 
+---
+
 ## Components: components/TodoItem.jsx
-### Responsibility: Display a single todo item.
+**Responsibility: Display a single todo item.**
 
 - Receives one todo as a prop
 
@@ -96,15 +102,18 @@ src/
 - Button to remove task
 - Calls toggleTodo(id) and removeTodo(id) from the store
 
+---
+
 ## Components: components/EmptyState.jsx
-### Responsibility: Improve UX when there are no todos.
+**Responsibility: Improve UX when there are no todos.**
 
 - Displays a message and illustration
 - Provides a friendly and accessible empty state
 
+---
 
 ## Src: App.jsx
-### Responsibility: Application layout and composition.
+**Responsibility: Application layout and composition.**
 - Renders the main structure of the app
 
 **Combines:**
