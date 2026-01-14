@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { AddTodoForm } from './components/addTodoForm.jsx';
+import { TodoItem } from './components/todoItem.jsx';
+import { TodoList } from './components/todoList.jsx';
 
 
 
@@ -16,7 +18,7 @@ const TodoContent = styled.main`
   background: white;
   padding: 30px;
   border-radius: 10px;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 `;
@@ -46,7 +48,9 @@ export default function App() {
           <h1>Todo App</h1>
           <p>Keep track of your tasks</p>
         </Heading>
+        
         <AddTodoForm />
+        <TodoList />
       </TodoContent>
     </AppContainer>
   );
