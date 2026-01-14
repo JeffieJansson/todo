@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { AddTodoForm } from './components/addTodoForm.jsx';
-import { TodoItem } from './components/todoItem.jsx';
 import { TodoList } from './components/todoList.jsx';
 
 
