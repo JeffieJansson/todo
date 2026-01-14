@@ -30,7 +30,7 @@ export const AddTodoForm = () => {
   const [text, setText] = useState("");
   const addTodo = useTodoStore((state) => state.addTodo);
 
-  const handleSubmit = (e) => {
+  const handleAddTodo = (e) => {
     e.preventDefault();
     if(!text.trim()) return;
     addTodo(text);
@@ -39,11 +39,14 @@ export const AddTodoForm = () => {
   return (
 
 <FormContainer>
-    <form onSubmit={handleSubmit}>
-      <Input type="text" placeholder="Add a new todo..." value={text} onChange={(e) => setText(e.target.value)} />
-
-         <SubmitButton type="submit">Add Todo</SubmitButton>
-    
+    <form onSubmit={handleAddTodo}>
+      <Input 
+      type="text" 
+      placeholder="Add a new todo..." 
+      value={text} 
+      onChange={(e) => setText(e.target.value)} 
+      />
+   <SubmitButton type="submit">Add Todo</SubmitButton>
     </form>
 </FormContainer>
   )
