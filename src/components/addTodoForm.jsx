@@ -7,12 +7,16 @@ const FormContainer = styled.div`
   display: flex;
   gap: 10px;
   border-radius: 8px;
-  padding: 10px;
-  padding : 20px;
+  padding: 20px;
+  `;
+
+const Form = styled.form`
+  display: flex;
+  gap: 10px;
   `;
 
 const Input = styled.input`
-flex: 1;
+  flex: 1;
   padding: 10px;
   border: 2px solid #948f8f;
   border-radius: 5px;
@@ -37,9 +41,10 @@ export const AddTodoForm = () => {
     setText("");
   }
   return (
+    <>
 
 <FormContainer>
-    <form onSubmit={handleAddTodo}>
+    <Form onSubmit={handleAddTodo}>
       <Input 
       type="text" 
       placeholder="Add a new todo..." 
@@ -47,8 +52,9 @@ export const AddTodoForm = () => {
       onChange={(e) => setText(e.target.value)} 
       />
    <SubmitButton type="submit">Add Todo</SubmitButton>
-    </form>
+    </Form>
 </FormContainer>
+</>
   )
 }
 
