@@ -1,19 +1,16 @@
-import styled from 'styled-components';
 import { useTodoStore } from '../store/todoStore.jsx'
+import { TodoItem } from './todoItem.jsx';
 
-export const todoList = () => {
+export const TodoList = () => {
   const todos = useTodoStore ((state) => state.todos)
 
 
   return (
-    <div>
-      <ul>
-    {todos.map((todo) => (
-      <li key={todo.id}>
-        {todo.text}
-      </li>
+    <>
+    {todos
+      .map((todo) => (
+    <TodoItem key={todo.id} todo={todo} />
     ))}
-    </ul>
-    </div>
+    </>
   )
 }
