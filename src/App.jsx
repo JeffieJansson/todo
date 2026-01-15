@@ -7,7 +7,7 @@ import { TodoCount } from './components/todoCounter.jsx';
 
 const AppContainer = styled.div`
 min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(45deg, #dd88ff, #ffddcc);
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@ min-height: 100vh;
 `;
 
 const TodoContent = styled.main`
-  background: white;
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 30px;
   border-radius: 10px;
   max-width: 500px;
@@ -51,8 +51,8 @@ export default function App() {
         </Heading>
         
         <AddTodoForm />
-        <TodoCount/>
         <TodoList />
+        <TodoCount/>
 
       </TodoContent>
     </AppContainer>

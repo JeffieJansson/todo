@@ -14,10 +14,14 @@ const ItemContainer = styled.div`
   justify-content: space-between;
   `;
 
-  const RemoveButton = styled.button`
-  background-color: #d3d8f0;
-  color: #000;
-  border-radius: 8px;
+  const DeleteIcon = styled.img`
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+     &:hover {
+      transform: scale(1.1);
+    }
   `;
 
 return (
@@ -30,7 +34,11 @@ return (
       <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
         {todo.text}
       </span>
-    <RemoveButton onClick={() => removeTodo(todo.id)}>Remove</RemoveButton>
+      <DeleteIcon 
+        src="/delete.png" 
+        alt="Delete" 
+        onClick={() => removeTodo(todo.id)}
+      />
   </ItemContainer>
 )
 }

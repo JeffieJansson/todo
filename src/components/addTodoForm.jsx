@@ -6,28 +6,37 @@ import { useState } from 'react'
 const FormContainer = styled.div`
   display: flex;
   gap: 10px;
-  border-radius: 8px;
   padding: 20px;
   `;
 
 const Form = styled.form`
   display: flex;
   gap: 10px;
+  width: 100%;
   `;
 
 const Input = styled.input`
   flex: 1;
   padding: 10px;
   border: 2px solid #948f8f;
-  border-radius: 5px;
+  background: transparent;
+  outline: none;
   font-size: 16px;
   gap: 10px;
+  border-width: 0 0 2px 0;
+
+  &:focus {
+    border-color: #9575CD;
+  }
   `;
   
  const SubmitButton = styled.button`
-  background-color: #637be6;
+  background-color: rgba(255, 255, 255, 0.5);
   color: #000;
+  border: none;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0;
   `;
   
 export const AddTodoForm = () => {
