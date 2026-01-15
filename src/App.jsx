@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { AddTodoForm } from './components/addTodoForm.jsx';
 import { TodoList } from './components/todoList.jsx';
+import { TodoCount } from './components/todoCounter.jsx';
 
 
 
@@ -43,13 +44,16 @@ export default function App() {
   return (
     <AppContainer>
       <TodoContent>
+
         <Heading>
           <h1>Todo App</h1>
           <p>Keep track of your tasks</p>
         </Heading>
         
         <AddTodoForm />
+        <TodoCount/>
         <TodoList />
+
       </TodoContent>
     </AppContainer>
   );
