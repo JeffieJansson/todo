@@ -13,11 +13,13 @@ const ItemContainer = styled.div`
   padding : 10px;
   justify-content: space-between;
   `;
+
   const RemoveButton = styled.button`
   background-color: #d3d8f0;
   color: #000;
   border-radius: 8px;
   `;
+
 return (
   <ItemContainer>
     <input 
@@ -25,7 +27,9 @@ return (
       checked={todo.completed}
       onChange={() => toggleTodo(todo.id)}
       />
-      <span>{todo.text}</span>
+      <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+        {todo.text}
+      </span>
     <RemoveButton onClick={() => removeTodo(todo.id)}>Remove</RemoveButton>
   </ItemContainer>
 )
