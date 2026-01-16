@@ -8,7 +8,6 @@ The purpose of the project is to demonstrate an understanding of **global state 
 
 - Understand and apply global state management
 - Use Zustand instead of React Context or prop drilling
-- Build a clean, accessible, and responsive user interface
 - Structure the project in a clear and maintainable way
 
 ## Project Requirements
@@ -29,6 +28,13 @@ The application fulfills the following requirements:
   - All contrasts should be OK
   - The app aims for a **Lighthouse score of at least 95**
 - Clean code principles are followed throughout the project
+
+---
+
+## Project design color inspo
+- https://www.shutterstock.com/sv/search/purple-%26-peach-gradient?dd_referrer=https%3A%2F%2Fwww.google.com%2F
+
+
 
 
 # Project Structure & Responsibilities
