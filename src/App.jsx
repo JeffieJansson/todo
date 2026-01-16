@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import GlobalStyles from './style/GlobalStyles.jsx';
 import { AddTodoForm } from './components/addTodoForm.jsx';
 import { TodoList } from './components/todoList.jsx';
 import { TodoCount } from './components/todoCounter.jsx';
@@ -6,12 +7,14 @@ import { TodoCount } from './components/todoCounter.jsx';
 
 
 const AppContainer = styled.div`
-min-height: 100vh;
-  background: linear-gradient(45deg, #dd88ff, #ffddcc);
+  width: 100%;
+  min-height: 100vh;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Aboreto', cursive;
+  background: linear-gradient(45deg, #dd88ff, #ffddcc);
 `;
 
 const TodoContent = styled.main`
@@ -42,12 +45,13 @@ const Heading = styled.header`
 
 export default function App() {
   return (
+<>
+<GlobalStyles />
     <AppContainer>
       <TodoContent>
 
         <Heading>
           <h1>Todo App</h1>
-          <p>Keep track of your tasks</p>
         </Heading>
         
         <AddTodoForm />
@@ -56,5 +60,6 @@ export default function App() {
 
       </TodoContent>
     </AppContainer>
+</>
   );
 }
