@@ -27,19 +27,20 @@ const CounterTodos = styled.div`
 
 export const TodoCount = () => {
   const todos = useTodoStore ((state) => state.todos);
-
   const completedTodos = todos.filter(todo => todo.completed).length;
   const unCompletedTodos = todos.filter(todo => !todo.completed).length;
+
   return (
     <CounterContainer>
-    <CounterTodos>
-      <CounterText> Completed todos: {completedTodos} </CounterText>
-      </CounterTodos>
 
       <CounterTodos>
-      <CounterText> Uncompleted todos: {unCompletedTodos} </CounterText>
-      </CounterTodos>
+        <CounterText> Done: {completedTodos} </CounterText>
+        </CounterTodos>
 
-  </CounterContainer>
+        <CounterTodos>
+        <CounterText> To do: {unCompletedTodos} </CounterText>
+        </CounterTodos>
+
+    </CounterContainer>
   )
 }

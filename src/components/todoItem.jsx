@@ -10,7 +10,6 @@ const ItemContainer = styled.div`
   gap: 10px;
   border-radius: 8px;
   padding: 10px;
-  padding : 10px;
   justify-content: space-between;
   `;
 
@@ -28,6 +27,8 @@ return (
   <ItemContainer>
     <input 
       type="checkbox"
+      id={`todo-${todo.id}`}
+      aria-label={todo.text || 'Todo item'}
       checked={todo.completed}
       onChange={() => toggleTodo(todo.id)}
       />

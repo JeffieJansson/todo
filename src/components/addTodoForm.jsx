@@ -37,6 +37,13 @@ const Input = styled.input`
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 0;
+
+   &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
   `;
   
 export const AddTodoForm = () => {
@@ -57,6 +64,7 @@ export const AddTodoForm = () => {
       <Input 
       type="text" 
       placeholder="Add a new todo..." 
+      aria-label="Add a new todo"
       value={text} 
       onChange={(e) => setText(e.target.value)} 
       />
