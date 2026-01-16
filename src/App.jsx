@@ -4,8 +4,6 @@ import { AddTodoForm } from './components/addTodoForm.jsx';
 import { TodoList } from './components/todoList.jsx';
 import { TodoCount } from './components/todoCounter.jsx';
 
-
-
 const AppContainer = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -42,24 +40,20 @@ const Heading = styled.header`
   }
 `;
 
-
 export default function App() {
   return (
-<>
+    <>
 <GlobalStyles />
-    <AppContainer>
-      <TodoContent>
-
+  <AppContainer>
+    <TodoContent>
         <Heading>
           <h1>Todo App</h1>
         </Heading>
-        
         <AddTodoForm />
-        <TodoList />
-        <TodoCount/>
-
-      </TodoContent>
-    </AppContainer>
-</>
+       <TodoList />
+      <TodoCount/>
+    </TodoContent>
+  </AppContainer>
+    </>
   );
 }

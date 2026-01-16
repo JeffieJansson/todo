@@ -24,8 +24,6 @@ const EmptyText = styled.p`
     width: 30px;
     height: 30px;
     margin-left: 10px;
-
-
   `;
 
 export const EmptyState = () => {
@@ -35,7 +33,7 @@ return (
     <EmptyTitle>No todos here!
     <CheckIcon src="/check.svg" alt="No todos" />
     </EmptyTitle>
-    <EmptyText>Either you deserve a break or you it's time to add some todos!</EmptyText>
+    <EmptyText>Either you deserve a break or it's time to add some todos!</EmptyText>
   </EmptyContainer>
 )
 }

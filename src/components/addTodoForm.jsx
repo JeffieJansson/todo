@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { useTodoStore } from '../store/todoStore.jsx'
 import { useState } from 'react'
 
-
 const FormContainer = styled.div`
   display: flex;
   gap: 10px;
@@ -71,7 +70,7 @@ export const AddTodoForm = () => {
    <SubmitButton type="submit">Add Todo</SubmitButton>
     </Form>
 </FormContainer>
-</>
+   </>
   )
 }
 

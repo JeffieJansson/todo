@@ -6,7 +6,6 @@ export const useTodoStore = create((set) => ({
     { id: 2, text: "Drink Coffee", completed: true },
     { id: 3, text: "Clean", completed: true },
     { id: 4, text: "Read", completed: false }
-
   ],
 
   addTodo: (text) => set((state) => ({
@@ -17,5 +16,4 @@ export const useTodoStore = create((set) => ({
     
   toggleTodo: (id) => set((state) => ({
     todos: state.todos.map(todo => todo.id === id ? { ...todo, completed: !todo.completed } : todo)}))
-
 }));
