@@ -7,6 +7,15 @@ const CounterContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
+
+  @media (max-width: 480px) {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 40px;
+  }
 `;
 
 const CounterTodos = styled.div`
@@ -15,6 +24,16 @@ const CounterTodos = styled.div`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
   background-color: rgba(255, 255, 255, 0.5);
+
+  @media (max-width: 480px) {
+    padding: 8px;
+    flex: 1;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    padding: 12px;
+  }
 `;
 
   const CounterText = styled.p`
@@ -22,6 +41,14 @@ const CounterTodos = styled.div`
   font-size: 16px;
   font-weight: 500;
   margin: 0;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
   `;
 
 

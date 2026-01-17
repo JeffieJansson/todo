@@ -12,6 +12,10 @@ const AppContainer = styled.div`
   align-items: center;
   font-family: 'Aboreto', cursive;
   background: linear-gradient(45deg, #dd88ff, #ffddcc);
+
+  @media (max-width: 480px) {
+    padding: 10px;
+  }
 `;
 
 const TodoContent = styled.main`
@@ -20,7 +24,21 @@ const TodoContent = styled.main`
   border-radius: 10px;
   max-width: 500px;
   width: 100%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 480px) {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 600px;
+    padding: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 700px;
+  }
 `;
 
 const Heading = styled.header`
@@ -36,6 +54,22 @@ const Heading = styled.header`
   p {
     margin: 10px 0 0 0;
     color: #000000;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 20px;
+
+    h1 {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 24px;
+    }
   }
 `;
 

@@ -6,13 +6,22 @@ const FormContainer = styled.div`
   display: flex;
   gap: 10px;
   padding: 20px;
-  `;
+
+  @media (max-width: 480px) {
+    padding: 15px;
+    gap: 8px;
+  }
+`;
 
 const Form = styled.form`
   display: flex;
   gap: 10px;
   width: 100%;
-  `;
+
+  @media (max-width: 480px) {
+    gap: 8px;
+  }
+`;
 
 const Input = styled.input`
   flex: 1;
@@ -27,7 +36,17 @@ const Input = styled.input`
   &:focus {
     border-color: #9575CD;
   }
-  `;
+
+  @media (max-width: 480px) {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 12px;
+    font-size: 16px;
+  }
+`;
   
  const SubmitButton = styled.button`
   background-color: rgba(255, 255, 255, 0.5);
@@ -36,14 +55,26 @@ const Input = styled.input`
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 0;
+  padding: 10px 16px;
+  font-size: 14px;
 
    &:hover {
     transform: scale(1.05);
     cursor: pointer;
     transition: transform 0.2s;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    }
-  `;
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+`;
   
 export const AddTodoForm = () => {
   const [text, setText] = useState("");
