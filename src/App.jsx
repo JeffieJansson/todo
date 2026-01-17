@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import GlobalStyles from './style/GlobalStyles.jsx';
 import { AddTodoForm } from './components/addTodoForm.jsx';
 import { TodoList } from './components/todoList.jsx';
 import { TodoCount } from './components/todoCounter.jsx';
@@ -42,18 +41,15 @@ const Heading = styled.header`
 
 export default function App() {
   return (
-    <>
-<GlobalStyles />
-  <AppContainer>
-    <TodoContent>
-        <Heading>
-          <h1>Todo App</h1>
-        </Heading>
-        <AddTodoForm />
-       <TodoList />
-      <TodoCount/>
-    </TodoContent>
-  </AppContainer>
-    </>
+    <AppContainer>
+      <TodoContent>
+          <Heading>
+            <h1>Todo App</h1>
+          </Heading>
+          <AddTodoForm />
+         <TodoList />
+        <TodoCount/>
+      </TodoContent>
+    </AppContainer>
   );
 }
