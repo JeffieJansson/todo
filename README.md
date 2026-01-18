@@ -3,13 +3,6 @@
 This project is a Todo application built with React and Zustand.  
 The purpose of the project is to demonstrate an understanding of **global state management**, clean code structure, accessibility, and responsive design without using prop drilling.
 
-
-## Project Goals
-
-- Understand and apply global state management
-- Use Zustand instead of React Context or prop drilling
-- Structure the project in a clear and maintainable way
-
 ## Project Requirements
 
 The application fulfills the following requirements:
@@ -31,8 +24,13 @@ The application fulfills the following requirements:
 
 ---
 
-## Project design color inspo
+## Project design color inspo and zustand articles
 - https://www.shutterstock.com/sv/search/purple-%26-peach-gradient?dd_referrer=https%3A%2F%2Fwww.google.com%2F
+
+- https://dev.to/franklin030601/using-zustand-with-react-js-9di
+
+- https://medium.com/inside-meteor/zustand-the-real-definition-of-elegant-state-320413c69541
+
 
 
 
@@ -113,7 +111,7 @@ src/
 ## Components: components/EmptyState.jsx
 **Responsibility: Improve UX when there are no todos.**
 
-- Displays a message and illustration
+- Displays a message and check icon
 - Provides a friendly and accessible empty state
 
 ---
